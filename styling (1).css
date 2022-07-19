@@ -1,0 +1,419 @@
+/*Over all all page*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+/*Body*/
+
+#body {
+    background-image: url(formbackground.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/*Anchor tag to remove link trace*/
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+/*Nevigaction bar*/
+
+#header {
+    width: 100%;
+    height: 25vh;
+    background-color: rgb(7, 4, 189);
+    display: block;
+
+}
+
+nav {
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    height: 9vh;
+    border-radius: 120px;
+    z-index: 111;
+}
+
+#logo {
+
+    height: 8vh;
+    margin: 20px 0px;
+    cursor: pointer;
+
+}
+
+nav ul {
+    background-color:#3586ff ;
+    width: 100%;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: '';
+    background: rgb(7, 4, 189) ;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top0.5s, opacity 0.5s;
+}
+
+nav ul li:hover {
+    color:#3586ff;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    background: #3586ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: padding 1s;
+}
+
+nav.sticky ul {
+    width: auto;
+}
+
+/*Banner*/
+
+#banner {
+    width: 100%;
+    height: 499px;
+    margin: 0 auto;
+
+}
+
+#banner img {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+#banner-text {
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    color: #fff;
+    font-size: 70px;
+    /* background-color: bisque; */
+
+}
+
+#banner p {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+/*hotel rooms*/
+
+#hotel {
+    border: 0px;
+    border-color: rgb(247, 139, 8);
+    margin: 0%;
+    padding: 0%;
+    height: 150px;
+
+}
+
+#align {
+    width: 100%;
+    display: inline;
+
+}
+
+#photo {
+    display: inline-block;
+    width: 15;
+    margin: 5px;
+    max-width: 100%;
+    text-align: center;
+    text-align: center;
+}
+
+#photo img {
+    max-width: 100%;
+    width: 100%;
+}
+
+#caption {
+    border: 1px solid;
+    text-align: center;
+    color: black;
+
+}
+
+#caption:hover {
+    color: black;
+    background-color: red;
+    cursor: grab;
+}
+
+/*form*/
+
+#formbackground {
+    background-image: url(formbackground.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+#form {
+    align-items: center;
+    width: 50%;
+    border: 2px solid brown;
+    margin: 25px auto;
+    padding: 30px 30px;
+    background: rgb(34, 12, 106);
+    background: linear-gradient(145deg, rgba(34, 12, 106, 1) 0%, rgba(101, 23, 213, 1) 7%, rgba(224, 154, 202, 1) 37%, rgba(217, 59, 124, 1) 60%, rgba(33, 136, 235, 1) 91%, rgb(3, 23, 115) 100%);
+    display: block;
+}
+
+#innerform {
+    width: 100%;
+    display: inline-block;
+}
+
+#input {
+    width: 60%;
+    align-items: center;
+    height: 30px;
+    margin: 5px;
+}
+
+#input:hover {
+    color: rgb(23, 237, 241);
+    background-color: rgb(135, 135, 136);
+    cursor: pointer;
+}
+
+#submit {
+    width: 100px;
+    background: rgb(224,252,252);
+    background: linear-gradient(145deg, rgba(224,252,252,1) 0%, rgba(244,227,242,1) 49%, rgb(200, 225, 249) 100%);
+}
+
+#submit:hover {
+    color: rgb(3, 15, 72);
+    background-color: rgb(78, 78, 79);
+    cursor: pointer;
+}
+
+#formcaption {
+    border: 1px solid;
+    align-items: center;
+    text-align: center;
+    color: black;
+
+}
+
+/* Review*/
+
+#reviewblock {
+    display: inline;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    /* border: 2px solid black;
+    background-color: chartreuse; */
+    overflow: hidden;
+}
+
+#review {
+    display: inline-block;
+    margin: 0 auto;
+    width: 10%;
+    text-align: center;
+    /* background-color: #777;  */
+    background: rgb(255,243,201);
+background: linear-gradient(145deg, rgba(255,243,201,1) 0%, rgba(192,247,223,1) 59%, rgba(240,240,240,1) 100%);
+    
+    overflow: hidden;
+}
+
+/*map*/
+
+Map #mapbox {
+    display: inline;
+    width: 100%;
+    /* height: 400px;*/
+}
+
+#map {
+    display: inline;
+    max-width: 40%;
+    align-items: center;
+    margin: 0 auto;
+    display: table;
+}
+
+/*Classwork
+#imagebox{
+    width: 400px;
+    height: 300px;
+    border: 2px solid red;
+    margin: 10px;
+    background-color: rgb(66, 14, 224);
+    position: relative;
+    overflow: hidden;
+}
+#imagebox img{
+    width: 100%;
+    max-width: 100%;
+}
+#imagebox:hover{
+    opacity: .5;
+}*/
+/* Footer*/
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#scocial_icons,
+#menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+#scocial_icons a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#scocial_icons a:hover {
+    transform: translateY(-10px);
+}
+
+#menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+#menu li a:hover {
+    opacity: 1;
+}
+
+#footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animatewave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animatewave_02 3s linear infinite;
+}
+@keyframes animatewave {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animatewave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
